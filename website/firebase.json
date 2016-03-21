@@ -1,0 +1,9 @@
+{
+  "firebase": "alightswitch",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
