@@ -2,7 +2,7 @@ var firebase = require("firebase");
 var gpio = require("onoff").Gpio;
 
 var isSwitchOn; 
-var firebaseReference = new Firebase("https://alightswitch.firebaseio.com/");
+var firebaseReference = new Firebase("https://{YOUR_FIREBASE_APP}.firebaseio.com/");
 var lightSwitch = new gpio(17, 'in', 'both');
 
 // Read initial state of switch, then watch for changes

@@ -1,5 +1,5 @@
 {
-  "firebase": "alightswitch",
+  "firebase": "{YOUR_FIREBASE_APP}",
   "public": ".",
   "ignore": [
     "firebase.json",
