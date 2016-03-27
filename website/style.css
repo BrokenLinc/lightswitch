@@ -9,6 +9,9 @@ body.light-on {
 	color: black;
 }
 canvas {
+	display: none;
+}
+body.loaded canvas {
 	display: block;
 }
 #message {

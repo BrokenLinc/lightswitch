@@ -32,7 +32,8 @@ var shape = new THREE.Mesh( geometry, material );
 scene.add( shape );
 
 // Add wireframe to shape
-wireframe = new THREE.EdgesHelper( shape, 0x222222 ); // dark grey lines
+wireframe = new THREE.EdgesHelper( shape, 0xff8800 ); // dark grey lines
+wireframe.material.linewidth = 2;
 scene.add( wireframe );
 
 // Add ambient light
@@ -57,11 +58,11 @@ function setLightIsOn(isLightOn) {
 		renderer.setClearColor( 0xffffff, 0); // white
 	} else {
 		wireframe.visible = true;
-		directionalLight.intensity = ambientLight.intensity = 0.05; // 10% brightness
+		directionalLight.intensity = ambientLight.intensity = 0.08; // 10% brightness
 		renderer.setClearColor( 0x000000, 0); // black
 	}
 }
-setLightIsOn(false); // Initiall default lights "off"
+setLightIsOn(false); // Initial default lights "off"
 
 // Render loop and animate spinning of shape
 function render() {
