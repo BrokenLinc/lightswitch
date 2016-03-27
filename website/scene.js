@@ -10,7 +10,9 @@ var camera = new THREE.PerspectiveCamera(
 //camera.position.z = 5;
 
 // Add renderer
-var renderer = new THREE.WebGLRenderer({ alpha: true });
+var renderer = new THREE.WebGLRenderer(
+	// { alpha: true }
+);
 document.body.appendChild( renderer.domElement );
 
 // // Keep camera and renderer the same size as the viewport
