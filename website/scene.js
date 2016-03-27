@@ -53,11 +53,9 @@ document.addEventListener('lightswitch', function(e){
 });
 function setLightIsOn(isLightOn) {
 	if(isLightOn) {
-		renderer.setClearColor( 0xffffff, 0); // white
 		directionalLight.intensity = ambientLight.intensity = 1; // full brightness
 		wireframe.visible = false;
 	} else {
-		renderer.setClearColor( 0x000000, 0); // black
 		directionalLight.intensity = ambientLight.intensity = 0.08; // 10% brightness
 		wireframe.visible = true;
 	}
