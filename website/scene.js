@@ -7,7 +7,7 @@ var camera = new THREE.PerspectiveCamera(
 	// 0.1, // near
 	// 1000 // far
 );
-camera.position.z = 5;
+//camera.position.z = 5;
 
 // Add renderer
 var renderer = new THREE.WebGLRenderer({ alpha: true });
