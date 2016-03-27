@@ -1,8 +1,11 @@
 # lightswitch
 A website controlled with a household light switch.
 
-## Helpful links
+Find out if the switch is on at [alightswitch.firebaseapp.com](https://alightswitch.firebaseapp.com/).
 
-- [Node embedded development](https://learn.adafruit.com/node-embedded-development)
-- [Firebase: realtime data hosting platform](https://www.firebase.com/)
-- [ThreeJS: Javascript WebGL library](http://threejs.org/)
+### DIY requirements:
+- [Firebase](https://www.firebase.com/) account (free tier)
+- [RaspberryPi running NodeJS](https://learn.adafruit.com/node-embedded-development)
+- Hardware:
+
+![Circuit diagram](circuit-digram.png)
