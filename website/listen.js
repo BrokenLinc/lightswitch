@@ -1,4 +1,3 @@
-var messageNode = document.getElementById('message');
 var firebaseReference = new Firebase("https://{YOUR_FIREBASE_APP}.firebaseio.com/");
 
 // Listen for changes to the data
