@@ -16,11 +16,11 @@ document.body.appendChild( renderer.domElement );
 // Keep camera and renderer the same size as the viewport
 function fitRendererToWindow() {
 	camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
+	camera.updateProjectionMatrix();
 	renderer.setSize( window.innerWidth, window.innerHeight );
 }
-window.addEventListener('resize', fitRendererToWindow);
 fitRendererToWindow();
+window.addEventListener('resize', fitRendererToWindow);
 
 // Add geometric shape
 var geometry = new THREE.DodecahedronGeometry();
@@ -37,12 +37,12 @@ wireframe.material.linewidth = 2;
 scene.add( wireframe );
 
 // Add ambient light
-// (slightly blue light all around)
+// (off-white)
 var ambientLight = new THREE.AmbientLight( 0xdddddd, 1 );
 scene.add( ambientLight );
 
 // Add directional light
-// (slightly yellow light from above)
+// (a bit brighter)
 var directionalLight = new THREE.DirectionalLight( 0x1c1c1c, 1 );
 directionalLight.position.set( 0, 1, 0.5 );
 scene.add( directionalLight );
@@ -53,16 +53,15 @@ document.addEventListener('lightswitch', function(e){
 });
 function setLightIsOn(isLightOn) {
 	if(isLightOn) {
-		wireframe.visible = false;
-		directionalLight.intensity = ambientLight.intensity = 1; // full brightness
 		renderer.setClearColor( 0xffffff, 0); // white
+		directionalLight.intensity = ambientLight.intensity = 1; // full brightness
+		wireframe.visible = false;
 	} else {
-		wireframe.visible = true;
-		directionalLight.intensity = ambientLight.intensity = 0.08; // 10% brightness
 		renderer.setClearColor( 0x000000, 0); // black
+		directionalLight.intensity = ambientLight.intensity = 0.08; // 10% brightness
+		wireframe.visible = true;
 	}
 }
-setLightIsOn(false); // Initial default lights "off"
 
 // Render loop and animate spinning of shape
 function render() {
