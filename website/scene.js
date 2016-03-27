@@ -31,11 +31,6 @@ var material = new THREE.MeshPhongMaterial( {
 var shape = new THREE.Mesh( geometry, material );
 scene.add( shape );
 
-// Add wireframe to shape
-wireframe = new THREE.EdgesHelper( shape, 0xff8800 ); // dark grey lines
-wireframe.material.linewidth = 2;
-scene.add( wireframe );
-
 // Add ambient light
 // (off-white)
 var ambientLight = new THREE.AmbientLight( 0xdddddd, 1 );
@@ -46,6 +41,11 @@ scene.add( ambientLight );
 var directionalLight = new THREE.DirectionalLight( 0x1c1c1c, 1 );
 directionalLight.position.set( 0, 1, 0.5 );
 scene.add( directionalLight );
+
+// Add wireframe to shape
+wireframe = new THREE.EdgesHelper( shape, 0xff8800 ); // dark grey lines
+wireframe.material.linewidth = 2;
+scene.add( wireframe );
 
 // Listen for lightswitch event and update scene
 document.addEventListener('lightswitch', function(e){
